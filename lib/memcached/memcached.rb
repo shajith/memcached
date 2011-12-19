@@ -610,7 +610,7 @@ Please note that when <tt>:no_block => true</tt>, update methods do not raise on
         end
       end
     end
-    raise EXCEPTIONS[ret], message
+    raise EXCEPTIONS[ret] || "Error code:#{ret}", message
   end
 
   # Turn an array of keys into a hash of keys to servers.
